@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Barang</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <style>
+    * {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      list-style: none;
+      text-decoration: none;
+      border-radius: 7px;
+    }
+    body {
+      margin: auto;
+      width: 60%;
+    }
+    a {
+      display: block;
+      padding: 1vh 2vw;
+      background: black;
+      color: white;
+      transition: 0.2s;
+      width: max-content;
+    }
+    a:hover {
+      box-shadow: 2px 2px 10px gray;
+      background: white;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      box-shadow: 2px 2px 10px rgb(158, 158, 158);
+      padding: 1vh;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+  </style>
+  <body>
+    <h1>Edit Data Barang</h1>
+    <a href="/list">Kembali ke Daftar Barang</a>
+    <form action="/edit/<%= barang.id %>" method="POST">
+      <label for="nama">Nama Barang:</label>
+      <input
+        type="text"
+        id="nama"
+        name="nama"
+        value="<%= barang.nama %>"
+        required
+      /><br />
+      <label for="harga">Harga:</label>
+      <input
+        type="number"
+        id="harga"
+        name="harga"
+        value="<%= barang.harga %>"
+        required
+      /><br />
+      <label for="stok">Stok:</label>
+      <input
+        type="number"
+        id="stok"
+        name="stok"
+        value="<%= barang.stok %>"
+        required
+      /><br />
+      <label for="stok">Category:</label>
+      <input
+        type="text"
+        id="category"
+        name="category"
+        value="<%= barang.category %>"
+        required
+      /><br />
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>

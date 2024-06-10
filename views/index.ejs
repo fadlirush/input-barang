@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input Barang</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+  <style>
+    * {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      list-style: none;
+      text-decoration: none;
+      border-radius: 7px;
+    }
+    body {
+      margin: auto;
+      width: 60%;
+    }
+    a {
+      display: block;
+      padding: 1vh 2vw;
+      background: black;
+      color: white;
+      transition: 0.2s;
+      width: max-content;
+    }
+    a:hover {
+      box-shadow: 2px 2px 10px gray;
+      background: white;
+      color: black;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 1vh;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      box-shadow: 2px 2px 10px rgb(158, 158, 158);
+      padding: 1vh;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    .container {
+      display: grid;
+      gap: 2vh;
+    }
+  </style>
+  <body>
+    <% const data = re %>
+    <div class="container">
+      <h1>Input Data Barang</h1>
+      <a href="/list">Lihat Daftar Barang</a>
+      <form action="/add" method="POST">
+        <label for="nama">Nama Barang:</label>
+        <input type="text" id="nama" name="nama" required /><br />
+        <label for="harga">Harga:</label>
+        <input type="number" id="harga" name="harga" required /><br />
+        <label for="stok">Stok:</label>
+        <input type="number" id="stok" name="stok" required /><br />
+        <label for="stok">Category:</label>
+        <input type="text" id="category" name="category" required />
+        <ul>
+          <% forEach() %>
+          <li></li>
+          <% } %>
+        </ul>
+        <br />
+        <button type="submit">Tambah</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    const cat = document.getElementById("category");
+    if (cat.focus) {
+    }
+  </script>
+</html>
